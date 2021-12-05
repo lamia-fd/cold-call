@@ -2,13 +2,12 @@
 //  ViewController.swift
 //  cold call
 //
-//  Created by لمياء فالح الدوسري on 01/05/1443 AH.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-var count=0
+
     @IBOutlet weak var name: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +18,11 @@ var count=0
     
     
     @IBAction func callbtn(_ sender: Any) {
-        if count < names.count{
+        var count = Int.random(in: 0...5)
             name.text = names[count]
-            count += 1
+          
             
-        }else{
-            count = 0
-        }
+      
         
     }
     
